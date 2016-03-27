@@ -1,0 +1,152 @@
+[
+    {
+        "state": "State - JAMMU & KASHMIR",
+        "literate": 65688828,
+        "illiterate": 84806796
+    },
+    {
+        "state": "State - HIMACHAL PRADESH",
+        "literate": 21898392,
+        "illiterate": 60476832
+    },
+    {
+        "state": "State - PUNJAB",
+        "literate": 108434412,
+        "illiterate": 224485644
+    },
+    {
+        "state": "State - CHANDIGARH",
+        "literate": 3000144,
+        "illiterate": 9665256
+    },
+    {
+        "state": "State - UTTARAKHAND",
+        "literate": 38464068,
+        "illiterate": 82571436
+    },
+    {
+        "state": "State - HARYANA",
+        "literate": 105029688,
+        "illiterate": 199187856
+    },
+    {
+        "state": "State - NCT OF DELHI",
+        "literate": 48602088,
+        "illiterate": 152853204
+    },
+    {
+        "state": "State - RAJASTHAN",
+        "literate": 363277860,
+        "illiterate": 459303384
+    },
+    {
+        "state": "State - UTTAR PRADESH",
+        "literate": 1024977432,
+        "illiterate": 1372770660
+    },
+    {
+        "state": "State - BIHAR",
+        "literate": 619138788,
+        "illiterate": 630054636
+    },
+    {
+        "state": "State - SIKKIM",
+        "literate": 1987500,
+        "illiterate": 5339424
+    },
+    {
+        "state": "State - ARUNACHAL PRADESH",
+        "literate": 7412664,
+        "illiterate": 9192060
+    },
+    {
+        "state": "State - NAGALAND",
+        "literate": 7632816,
+        "illiterate": 16109208
+    },
+    {
+        "state": "State - MANIPUR",
+        "literate": 11367816,
+        "illiterate": 22901712
+    },
+    {
+        "state": "State - MIZORAM",
+        "literate": 2988372,
+        "illiterate": 10178100
+    },
+    {
+        "state": "State - TRIPURA",
+        "literate": 10429608,
+        "illiterate": 33657396
+    },
+    {
+        "state": "State - MEGHALAYA",
+        "literate": 14182608,
+        "illiterate": 21420060
+    },
+    {
+        "state": "State - ASSAM",
+        "literate": 144331188,
+        "illiterate": 230135724
+    },
+    {
+        "state": "State - WEST BENGAL",
+        "literate": 356854008,
+        "illiterate": 738459372
+    },
+    {
+        "state": "State - JHARKHAND",
+        "literate": 175920780,
+        "illiterate": 219936828
+    },
+    {
+        "state": "State - ODISHA",
+        "literate": 182779476,
+        "illiterate": 320911140
+    },
+    {
+        "state": "State - CHHATTISGARH",
+        "literate": 121983312,
+        "illiterate": 184559064
+    },
+    {
+        "state": "State - MADHYA PRADESH",
+        "literate": 357307680,
+        "illiterate": 514214028
+    },
+    {
+        "state": "State - GUJARAT",
+        "literate": 232156008,
+        "illiterate": 493120296
+    },
+    {
+        "state": "State - DAMAN & DIU",
+        "literate": 658092,
+        "illiterate": 2260872
+    },
+    {
+        "state": "State - DADRA & NAGAR HAVELI",
+        "literate": 1445748,
+        "illiterate": 2678760
+    },
+    {
+        "state": "State - MAHARASHTRA",
+        "literate": 369840516,
+        "illiterate": 978651480
+    },
+    {
+        "state": "State - ANDHRA PRADESH",
+        "literate": 408288204,
+        "illiterate": 606681120
+    },
+    {
+        "state": "State - KARNATAKA",
+        "literate": 245375700,
+        "illiterate": 487767864
+    },
+    {
+        "state": "State - GOA",
+        "literate": 3516696,
+        "illiterate": 13985844
+    }
+]
