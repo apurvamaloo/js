@@ -1,34 +1,8 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<style>
 
-body {
-  font: 10px sans-serif;
-}
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-
-.bar {
-  fill: steelblue;
-}
-
-.x.axis path {
-  display: none;
-}
-
-</style>
-<body>
-<script src="//d3js.org/d3.v3.min.js"></script>
-<script>
 
 var margin = {top: 20, right: 20, bottom: 150, left: 40},
     width = 1200 - margin.left - margin.right,
-    height = 900 - margin.top - margin.bottom;
+    height = 1800 - margin.top - margin.bottom;
 
 var x0 = d3.scale.ordinal()
     .rangeRoundBands([0, width], .1);
@@ -56,39 +30,15 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-/*d3.csv("data.csv", function(error, data) {
-  if (error) throw error;
-
-  var ageNames = d3.keys(data[0]).filter(function(key) { return key !== "State"; });
-   console.log(ageNames)
-  data.forEach(function(d) {
-    d.ages = ageNames.map(function(name) { return {name: name, value: +d[name]}; });
-    console.log(d.ages)
-  });
-
-  x0.domain(data.map(function(d) { return d.State; }));
-  x1.domain(ageNames).rangeRoundBands([0, x0.rangeBand()]);
-  y.domain([0, d3.max(data, function(d) { return d3.max(d.ages, function(d) { return d.value; }); })]);*/
 
 
 
-d3.json("statewise1.json", function(error,data) {
+
+d3.json("statewise.json", function(error,data) {
   if(error) console.log("Error: data not loaded!");
 
 
-  /*var ageNames = d3.keys(data[0]).filter(function(key) { return key !== "State"; });
-
-  data.forEach(function(d) {
-    d.ages = ageNames.map(function(name) { return {name: name, value: +d[name]}; });
-  });
-
-  x0.domain(data.map(function(d) { return d.State; }));
-  x1.domain(ageNames).rangeRoundBands([0, x0.rangeBand()]);
-  y.domain([0, d3.max(data, function(d) { return d3.max(d.ages, function(d) { return d.value; }); })]);*/
-
-
-// seriesNames = "Total", "Completed", "Canceled" and "Aborted"               See, we're filtering out "YEAR", "MONTH" and "MMM"
-//var seriesNames = d3.keys(data[0]).filter(function (key) { return (key !== "YEAR") && (key !== "MONTH") && (key !== "MMM"); });
+  
 var seriesNames = d3.keys(data[0]).filter(function (key) { return (key !== "state") ; });
 //                alert(JSON.stringify(seriesNames));
 //                alert(seriesNames);
@@ -106,20 +56,13 @@ console.log(d.persons);
 
 
 
-//alert(JSON.stringify(data));
+
 
 x0.domain(data.map(function (d) { return d.state; }));
-// Change State to be MMM, YEAR (for example: "Jan 2012") Could change this to Jan '12
-//x0.domain(data.map(function (d) { return d.MMM + " " + d.YEAR; }));
-//alert(JSON.stringify(data.map(function (d) { return d.MMM + " " + d.YEAR; })));
 
-//                //x1.domain(seriesNames).rangeRoundBands([0, x0.rangeBand()]);
 x1.domain(seriesNames).rangeRoundBands([0, x0.rangeBand()]);
 
-//                //y.domain([0, d3.max(data, function (d) { return d3.max(d.ages, function (d) { return d.value; }); })]);
-//                // Make the y domain go from 0 up to the max of d.Total (Total flights)
-//                y.domain([0, d3.max(data, function (d) { return d3.max(d.Total); })]);
-//y.domain([0, (10 + d3.max(data, function (d) { return d3.max(d.Flights, function (d) { return d.value; }); }))]);
+
 
 y.domain([0, d3.max(data, function(d) { return d3.max(d.persons, function(d) { return d.value; }); })]);
 
@@ -183,5 +126,3 @@ y.domain([0, d3.max(data, function(d) { return d3.max(d.persons, function(d) { r
       .text(function(d) { return d; });
 
 });
-
-</script></body></html>

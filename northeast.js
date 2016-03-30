@@ -1,8 +1,12 @@
 
-
+/*******************************************************************************
+Author: Venkata Karthik Thota
+File: gdpBarGraph.js
+See google style guide on JavaScript code sytle if needed.
+*******************************************************************************/
 
 // See D3 margin convention: http://bl.ocks.org/mbostock/3019563
-var margin = {top: 50, right: 10, bottom: 150, left:180},
+var margin = {top: 20, right: 10, bottom: 150, left:180},
     width = 700 - margin.right - margin.left,
     height = 600 - margin.top - margin.bottom;
 
@@ -13,6 +17,14 @@ The "g" element is used as a container for grouping objects. The SVG will be
 in "lightgrey" backgorund to help you visualize it.
 See https://developer.mozilla.org/en-US/docs/Web/SVG/Element/g for more info
 ------------------------------------------------------------------------------*/
+
+
+ var tip = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+    return "<strong>Male/Female Ratio:</strong> <span style='color:red'>" + d.value + "</span>";
+  });
 var svg = d3.select("body")
     .append("svg")
       .attr ({
@@ -22,7 +34,7 @@ var svg = d3.select("body")
     .append("g")
       .attr("transform","translate(" + margin.left + "," + margin.right + ")");
 
-
+svg.call(tip)
 /* -----------------------------------------------------------------------------
 SCALE and AXIS are two different methods of D3. See D3 API Refrence for info on
 AXIS and SCALES. See D3 API Refrence to understand the difference between
@@ -44,12 +56,14 @@ var yAxis = d3.svg.axis()
     .scale(yScale)
     .orient("left");
 
+   
+
 /* -----------------------------------------------------------------------------
 To understand how to import data. See D3 API refrence on CSV. Understand
 the difference between .csv, .tsv and .json files. To import a .tsv or
 .json file use d3.tsv() or d3.json(), respectively.
 ------------------------------------------------------------------------------*/
-d3.json("northstate.json", function(error,data) {
+d3.json("b1.json", function(error,data) {
   if(error) console.log("Error: data not loaded!");
 
   /*----------------------------------------------------------------------------
@@ -85,7 +99,9 @@ d3.json("northstate.json", function(error,data) {
       "y": function(d) { return yScale(d.value); },
       "width": xScale.rangeBand(),
       "height": function(d) { return  height - yScale(d.value); }
-    });
+    })
+     .on('mouseover', tip.show)
+      .on('mouseout', tip.hide);
 
 
      svg.selectAll('text')

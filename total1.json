@@ -1,0 +1,12 @@
+[
+    {
+        "state": "literate",
+        "male": 2125524940,
+        "female": 1591132188
+    },
+    {
+        "state": "illiterate",
+        "male": 991886208,
+        "female": 1358572924
+    }
+]

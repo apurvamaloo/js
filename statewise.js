@@ -1,30 +1,4 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<style>
 
-body {
-  font: 10px sans-serif;
-}
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-
-.bar {
-  fill: steelblue;
-}
-
-.x.axis path {
-  display: none;
-}
-
-</style>
-<body>
-<script src="//d3js.org/d3.v3.min.js"></script>
-<script>
 
 var margin = {top: 20, right: 20, bottom: 150, left: 40},
     width = 1200 - margin.left - margin.right,
@@ -184,4 +158,3 @@ y.domain([0, d3.max(data, function(d) { return d3.max(d.persons, function(d) { r
 
 });
 
-</script></body></html>
